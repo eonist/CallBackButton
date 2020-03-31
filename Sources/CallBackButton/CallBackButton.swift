@@ -25,7 +25,7 @@ open class CallBackButton: UIButton {
  * Handler code
  */
 extension CallBackButton {
-   @objc func buttonTouched(sender: UIButton) {
+   @objc open func buttonTouched(sender: UIButton) {
       // Swift.print("It Works!!!")
       onTapUpInside()
    }
