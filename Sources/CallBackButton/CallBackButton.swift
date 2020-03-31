@@ -11,6 +11,7 @@ open class CallBackButton: UIButton {
    public var onTapUpInside: OnTapUpInside = defaultOnTapUpInside
    override init(frame: CGRect) {
       super.init(frame: frame)
+      configButton()
       self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
    }
    /**
