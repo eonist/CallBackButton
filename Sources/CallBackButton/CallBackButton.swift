@@ -11,31 +11,14 @@ open class CallBackButton: UIButton {
    public var onTapUpInside: OnTapUpInside = defaultOnTapUpInside
    override init(frame: CGRect) {
       super.init(frame: frame)
-      configButton()
       self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
    }
    /**
     * Boilerplate
     */
-   @available(*, unavailable)
+   @available(*, unavailable) // avoids subsequent need to add this method
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
-}
-/**
- * Handler code
- */
-extension CallBackButton {
-   @objc open func buttonTouched(sender: UIButton) {
-      // Swift.print("It Works!!!")
-      onTapUpInside()
-   }
-}
-/**
- * Const & typealias
- */
-extension CallBackButton {
-   public typealias OnTapUpInside = () -> Void
-   public static var defaultOnTapUpInside: OnTapUpInside = { Swift.print("onTapUpInside") }
 }
 #endif
