@@ -9,7 +9,7 @@ import UIKit
  */
 open class CallBackButton: UIButton {
    public var onTapUpInside: OnTapUpInside = defaultOnTapUpInside
-   override init(frame: CGRect) {
+   override public init(frame: CGRect) {
       super.init(frame: frame)
       self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
    }
