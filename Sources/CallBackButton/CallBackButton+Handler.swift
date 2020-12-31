@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 /**
  * Handler code
@@ -11,3 +12,4 @@ extension CallBackButton {
       onTapUpInside()
    }
 }
+#endif
